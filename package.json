@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index",
         "my-linter-scan": "my-linter scan",
         "my-linter-fix": "my-linter fix",
         "commit": "npx cz"
@@ -22,7 +22,6 @@
         "espree": "9.6.1",
         "husky": "8.0.3",
         "lint-staged": "15.0.2",
-        "my-linter": "file:H:/project/my-linter/my-linter-0.0.1.tgz",
         "prettier": "3.0.3"
     },
     "lint-staged": {
@@ -38,5 +37,8 @@
         "commitizen": {
             "path": "./node_modules/my-linter/dist/cz.js"
         }
+    },
+    "dependencies": {
+        "fs-extra": "^11.1.1"
     }
 }
