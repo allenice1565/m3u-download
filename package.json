@@ -1,0 +1,42 @@
+{
+    "name": "m3u-download",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "my-linter-scan": "my-linter scan",
+        "my-linter-fix": "my-linter fix",
+        "commit": "npx cz"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@commitlint/cli": "18.0.0",
+        "@commitlint/config-conventional": "18.0.0",
+        "commitizen": "4.3.0",
+        "commitlint": "18.0.0",
+        "eslint": "8.52.0",
+        "eslint-config-prettier": "9.0.0",
+        "espree": "9.6.1",
+        "husky": "8.0.3",
+        "lint-staged": "15.0.2",
+        "my-linter": "file:H:/project/my-linter/my-linter-0.0.1.tgz",
+        "prettier": "3.0.3"
+    },
+    "lint-staged": {
+        "*.js, *.ts, *.vue, *.jsx, *.tsx": [
+            "eslint --fix",
+            "prettier"
+        ],
+        "*.md, *.less, *.scss": [
+            "prettier"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/my-linter/dist/cz.js"
+        }
+    }
+}
