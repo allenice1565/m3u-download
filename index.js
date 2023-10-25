@@ -1,11 +1,10 @@
-const fse = require('fs-extra')
-const base = 'https://v3.dious.cc'
+const puppeteer = require('puppeteer-core');
 
-fetch('https://v3.dious.cc/20220409/ZTrdYq0J/1500kb/hls/index.m3u8')
-    .then((res) => {
-        console.log('res:', typeof res, res)
-        fse.writeFileSync('./index.m3u8', 'res', 'utf8')
-    })
-    .catch((e) => {
-        console.log(e)
-    })
+(async () => {
+    const browser = await puppeteer.launch({ executablePath: 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe' });
+    const page = await browser.newPage();
+    await page.goto('https://baidu.com');
+    await page.screenshot({ path: 'example.png' });
+
+    await browser.close();
+})();
